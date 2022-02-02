@@ -1,5 +1,6 @@
 import math
 
+
 def are_parallel(r1, r2):
     if r1.m is None or r2.m is None:
         print("Non hai inserito una retta valida")
