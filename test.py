@@ -8,7 +8,6 @@ class Test(unittest.TestCase):
     def setUp(self):
         pass
 
-    # Returns True if the string contains 4 a.
     def test_parallel(self):
         r1 = Line()
         r2 = Line()
@@ -16,7 +15,6 @@ class Test(unittest.TestCase):
         r2.from_two_points([2, 2], [4, 4])
         self.assertTrue(are_parallel(r1=r1, r2=r2))
 
-    # Returns True if the string is in upper case.
     def test_perpendicular(self):
         r1 = Line()
         r2 = Line()
