@@ -19,8 +19,6 @@ class Line:
             self.m = 0
             self.q = p1[1]
         else:
-            print((p1[1]-p2[1]))
-            print((p1[0]-p2[0]))
             self.m = (p1[1]-p2[1])/(p1[0]-p2[0])
             self.q = p1[1] - (p1[1]-p2[1])/(p1[0]-p2[0])*p1[0]   
 

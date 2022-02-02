@@ -1,4 +1,6 @@
 import unittest
+from line import Line
+from utils import are_parallel, are_perpendicular
 
 
 class Test(unittest.TestCase):
@@ -7,12 +9,20 @@ class Test(unittest.TestCase):
         pass
 
     # Returns True if the string contains 4 a.
-    def test_strings_a(self):
-        self.assertEqual('a' * 4, 'aaaa')
+    def test_parallel(self):
+        r1 = Line()
+        r2 = Line()
+        r1.explicit_form(1, 20)
+        r2.from_two_points([2, 2], [4, 4])
+        self.assertTrue(are_parallel(r1=r1, r2=r2))
 
     # Returns True if the string is in upper case.
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
+    def test_perpendicular(self):
+        r1 = Line()
+        r2 = Line()
+        r1.explicit_form(-1, 20)
+        r2.from_two_points([2, 2], [4, 4])
+        self.assertTrue(are_perpendicular(r1=r1, r2=r2))
 
 
 if __name__ == '__main__':
